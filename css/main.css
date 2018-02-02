@@ -1,34 +1,40 @@
 /*Caracteristicas para pantalla scream*/
 *{
+  font-family: 'Indie Flower', cursive;
   margin: 0;
+  padding: 0;
 }
 body{
   display: grid;
-  grid-gap: 10px;
+  grid-gap: 1%;
   grid-template-areas:
-  "nav nav"
-  "header header"
-  "what-we-do contact-us"
-  "article article"
-  "footer footer";
-  font-family: 'Indie Flower', cursive;
+  "nav nav nav"
+  "header header header"
+  "what-we-do what-we-do contact-us"
+  "article article article"
+  "footer footer footer";
 }
 nav{
   background-color: #FF28D0;
   grid-area: nav;
-  height: 50px;
+  height: 9vh;
   width: 100%;
 }
 header{
+  background-image: url("../assets/images/image_all_need_love_dog.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
   display: grid;
+  height: 70vh;
   grid-area: header;
-  width: 100%;
+  margin-left: 3%;
+  width: 80%;
 }
 article{
   display: grid;
   grid-area: article;
   margin: 3%;
-  width: 100%;
+  width: 95%;
 }
 section{
   margin: 3%;
@@ -45,12 +51,27 @@ button{
   background-color: #302CF9;
   border-radius: 50px;
   color: #FFFFFF;
-  height: 50px;
+  height: 3rem;
   margin: 3% auto;
-  width: 190px;
+  width: 10rem;
 }
 ul{
   margin: 1% auto;
+}
+li{
+  list-style: none;
+  display: inline;
+}
+article{
+  height: 80vh;
+  grid-gap: 10%;
+  grid-template-areas:
+  "dog-1 dog-2 dog-3";
+}
+footer{
+  background-color: #7F00B2;
+  height: 50px;
+  width: 100%;
 }
 .what-we-do{
   grid-area: what-we-do;
@@ -70,21 +91,6 @@ ul{
   display: grid;
   grid-area: dog-3;
 }
-li{
-  list-style: none;
-  display: inline;
-}
-article{
-  height: 500px;
-  grid-gap: 10%;
-  grid-template-areas:
-  "dog-1 dog-2 dog-3";
-}
-footer{
-  background-color: #7F00B2;
-  height: 50px;
-  width: 100%;
-}
 .float-left{
   float: left;
 }
@@ -97,13 +103,14 @@ font-size: 20px;
 font-weight: 600;
 text-decoration: none;
 }
-.dogs{
-  height: 210px;
-  margin: 10px;
-  width: 310px;
+.what-we-do{
+  height: 40vh;
+}
+.contact-us{
+  height: 20vh;
 }
 /*Caracteristicas para pantalla movil*/
-@media screen and (min-width:500px)and (max-width:750px){
+@media only screen and (max-width: 500px) and (min-width: 341px){
   body{
     grid-template-areas:
     "nav"
@@ -114,15 +121,32 @@ text-decoration: none;
     "footer";
   }
   article{
-
     height: 1700px;
     grid-template-areas:
     "dog-1"
     "dog-2"
     "dog-3"
   }
+  header{
+    height: 30vh;
+  }
+  section{
+    margin-top: 3%;
+  }
+  article{
+    grid-gap: 1%;
+  }
   nav, header, article, section, footer {
-    max-width: 700px;
+    max-width: 500px;
     width: 100%;
   }
+  /* .dog-1{
+    height: 30vh;
+  }
+  .dog-2{
+    height: 30vh;
+  }
+  .dog-3{
+    height: 30vh;
+  } */
 }
