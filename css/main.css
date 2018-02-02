@@ -136,6 +136,9 @@ text-decoration: none;
   article{
     grid-gap: 1%;
   }
+  .what-we-do{
+    margin-bottom: 10%;
+  }
   nav, header, article, section, footer {
     max-width: 500px;
     width: 100%;
